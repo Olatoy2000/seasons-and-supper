@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Creamy Rice Pudding - Seasons and Suppers</title>
+	<style>
+		* { scroll-behavior: smooth; }	
+		
+		   body {
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+		.intro { 
+			background: #353642; 
+			border-bottom: 2px solid #f0f5f8; 
+			display: block;
+			min-height: 55px; 
+			width: 100%;
+			padding: 20px 0 15px 0;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+		.dropdown:hover .dropdown-menu {
+			display: block;
+		}
+		.dropdown-menu {
+			position: absolute;
+			background: white;
+			list-style-type: none;
+		}
+		.star:hover .button {
+			color: white;
+		}
+		.button:hover .button {
+			color: white;
+		}
+		body	 {
+			font-family: roboto;
+		}	
+
+		/* STYLING FOR CUSTOM CHECKBOX */
+		.checkbox {
+			background: linear-gradient(120deg, #6a6a6a, #c9c9c9);
+			width: 100px;
+			height: 50px;
+			border-radius: 35px;
+			box-shadow: inset 0 0.08px 0 #616363, inset 0 -0.8px 0 #c4c4c4;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.checkbox input {
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			opacity: 0;
+			z-index: 2;
+			cursor: pointer;
+
+		}
+
+		.checkbox .slider {
+			background: linear-gradient(0deg, #4d4d4d 0%, #585858 50%, #4d4d4d 100%);
+			width: 5.6em;
+			height: 2.2em;
+			border: 0.05em solid #7e7e7e;
+			border-radius: 2em;
+			box-shadow: inset 0 0 0.5em #282828, inset 0 0 0.1em #000;
+			position: absolute;
+			overflow: hidden;
+		}
+
+		.checkbox .slide {
+			box-sizing: border-box;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			height: 1.5em;
+			width: 160%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 2em;
+			padding: 0.1em;
+			transition: 0.8s;
+		}
+
+		.checkbox .knob {
+			background: linear-gradient(0deg, #dedede, #aaaaaa);
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 1.8em;
+			height: 1.8em;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			box-shadow: inset 0 0.1em 0 #e8e9e9, inset 0 -0.1em 0 #a9a9a9;
+		}
+	
+		.checkbox span {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: #282828;
+			text-shadow: #969696 0.1em 0.01em 0;
+			transition: 0.3s;
+			transition-delay: 300ms;
+		}
+
+		.checkbox input:checked + .slider .slide {
+			left: -3.35em;
+		}
+
+		.checkbox input:checked + .slider .slide {
+			color: #00f5d1;
+			text-shadow: #000 0 -0.04em 0, #00f5d1 0 0 1.5em;
+		}
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,800;0,8..60,900;1,8..60,200;1,8..60,300;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700;1,8..60,800;1,8..60,900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<!-- Body Section -->
+<body style="margin: 0;">
+	<!--HEADER section-->
+	<header class="intro">
+		<section style="display: flex; gap: 150px;">
+			<!---LOGO-->
+			<div>
+				<a href="https://www.seasonsandsuppers.ca/" title="Seasons and Suppers">
+					<img src="https://www.seasonsandsuppers.ca/wp-content/uploads/2021/04/ss-logo-white-retina.png" style="width: 300px; height: 150; padding-left: 60px;" />
+				</a>
+			</div>
+			<div style="display: flex; gap: 30px">
+				<!--NAVIGATION-->
+				
+				<nav style="display: flex; gap: 5px; font-family: ubuntu; color: #fff; letter-spacing: 2px; font-size: 82%">
+					<ul style="display: flex; gap: 20px; text-decoration: none; color: #fff; list-style-type: none">
+						<li class="dropdown" style="padding: 25px 15px">
+							<a href="https://www.seasonsandsuppers.ca/recipe-index-category/"><span style="text-decoration: none; color: #fff; padding: 25px 15px">All Recipes »</span></a>
+						</li>
+						<li class="dropdown" style="padding: 25px 15px">
+							<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#"><span style="text-decoration: none; color: #fff">Most Popular »</span></a>
+								<div class="dropdown-menu">
+									<ul style="width: 200px; list-style-type: none; vertical-align: middle; background-color: #f7f9fc; display: flex; gap: 30px; flex-direction: column">
+										<li style="list-style-type: none;" style="margin: 0; padding-top: 5px; line-height: 1rem; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/2-banana-banana-bread/" style="text-decoration: none"><span style="font-family: ubuntu; color: #353642; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em; padding-top: 5px">2-Banana Banana Bread</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/perfect-creamymacaroni-and-cheese/" style="text-decoration: none"><span style="color: #353642;font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em; padding-top: 5px">Creamy Baked Mac and Cheese</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/" aria-current="page" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Extra Creamy Rice Pudding</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/glazed-lemon-pound-cake-loaf/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Glazed Lemon Pound Cake Loaf</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/15-minute-spicy-udon-vegetable-stir-fry/" style="text-decoration: none"><span style="color: #353642; font-family:ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">15-Minute Udon Stir Fry</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/seeded-multigrain-sandwich-bread/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Multigrain Bread</span></a>
+										</li>
+										<li style="margin: 0 3px 0 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/mango-salad/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Mango Salad</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/skillet-pork-medallions-mushroom-marsala-sauce/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Pork Tenderloin Marsala</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/homemade-baked-beans/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Homemade Baked Beans</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/homemade-hamburger-buns/" style="text-decoration: none"><span style="color: #353642; font-family:ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Homemade Hamburger Buns</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/carrot-cake-loaf/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Carrot Cake Loaf</span></a>
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/classic-waffles/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em">Classic Homemade Waffles</span></a>	
+										</li>
+										<li style="margin: 0; padding-top: 5px; line-height: 1; text-align: left">
+											<a href="https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/" style="text-decoration: none"><span style="color: #353642; font-family: ubuntu; font-weight: 400; line-height: 1.3; letter-spacing: 1px; font-size: .87em; box-sizing: border-box;">Authentic Poutine Recipe</span></a>
+										</li>
+									</ul>
+								</div>
+						</li>
+						<li class="dropdown" style="margin: 0 3px 0 0; padding: 25px 15px">
+							<a href="https://www.seasonsandsuppers.ca/newsletter-subscribe/"><span style="text-decoration: none; color: #fff">SUBSCRIBE »</span></a>
+						</li>
+					</ul>
+				</nav>
+				<div style="display: flex; gap: 5px">
+				
+<!-- 	Social Media Icons -->
+					<ul style="list-style-type:none; display: flex; gap: 15px; padding: 10px 15px">
+						<li>
+							<a href="mailto:jennifer@seasonsandsuppers.ca" style="text-decoration: none; color: white">
+								<img src="./assets/email.svg" alt="Email Logo" />
+							</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/SeasonsandSuppers" style="text-decoration: none; color: white">
+								<img src="./assets/facebook.svg" alt="Facebook Logo" />
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/seasonsandsuppers/" style="text-decoration: none; color: white">
+								<img src="./assets/instagram.svg" alt="Instagram Logo" style="color: white"/>							
+							</a>
+						</li>
+						<li>
+							<a href="https://www.pinterest.ca/SeasonsSuppers/_created/" style="text-decoration: none; color: white">
+								<img src="./assets/pinterest.svg" alt="Pinterest Logo" />
+							</a>
+						</li>
+						<li>
+							<a href="https://www.seasonsandsuppers.ca/feed/" style="text-decoration: none; color: white">
+								<img src="./assets/spotify.svg" alt="Spotify Logo" />
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/seasonssuppers" style="text-decoration: none; color: white">
+							<img src="./assets/twitter.svg" alt="Twitter Logo" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!--SEARCH BAR-->
+				<div>
+					<input style="margin-top: 50px; background: #fdf8f5; padding: 5px; border-radius: 10px; width: 95%; height: 50px" type="text" placeholder="Search...        🔍" />
+				</div>
+		</section>
+	</header>
+	
+<!-- Main Section -->
+
+	<main style="display: flex; margin: 20px 120px 0; justify-content: space-between">
+<!-- Article -->
+		<article style="flex-basis: 65%; font-family: Source-Serif-4">
+<!-- Section 1 -->
+			<section>
+				<div style="padding: 20px 0px 45px; display: flex; gap: 5px; font-size: 12.96px">
+					<span><a href="https://www.seasonsandsuppers.ca/" style="text-decoration: none; color: #131f20;">Home</a> » </span>
+					<span><a href="https://www.seasonsandsuppers.ca/recipe-index-category/" style="text-decoration: none; color: #131f20;">Recipes</a> » </span>
+					<span><a href="https://www.seasonsandsuppers.ca/desserts/" style="text-decoration: none; color: #131f20;">Sweet Recipes</a> » </span>
+				</div>
+				<div>
+					<h1 style="font: 40px Didot, Times New Roman, serif; color: #353642; letter-spacing: .007em; margin-bottom: 10px; line-height: 1.17; font-weight: 300px">Extra Creamy Rice Pudding</h1>
+					<p style="display: flex; gap: 5px; font-style: italic; color: #131f20; font-size: 81%; letter-spacing: .05em">
+						<time class="entry-time">Feb 23, 2016</time> 
+						<span>|</span>
+						<a href="https://www.seasonsandsuppers.ca/author/jennifer/" style="text-decoration: none; color: #131f20"><span class="entry-author-name"> by Jennifer</span>
+						</a>
+						<span>|</span>
+						<time class="entry-modified-time">Last Updated: Nov 29, 2021</time>
+					</p>
+					<p>
+						<span style="background-color: #f0f5f8; padding: 8px 12px; border: 1px solid; border-radius: 8px">
+							<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#recipe" style="text-decoration: none; color: #333333;">
+							<img src="./assets/arrow.svg" alt="Arrow Logo" />
+							<span>Jump to Recipe</span>
+							</a>
+						</span>
+							<span style="background-color: #f0f5f8; padding: 8px 12px; border: 1px solid; border-radius: 8px;">
+							<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#recipe-video" style="text-decoration: none; color: #333333;">
+							<img src="./assets/video.svg" alt="Video Logo" />
+							<span>Jump to Video</span>
+							</a>
+						</span>
+					</p>
+				</div>
+			</section>
+<!-- Section 2 -->
+
+			<section>
+				<div style="font-family: Source-Serif-4">
+					<p style="margin: 55px 0 30px; padding: 19px 21px; background-color: #f0f5f8; border-radius: 10px; line-height: 1.5; font-size: 17.8px; 
+	    			font-weight: 150; color: #131f20">Looking for a creamy rice pudding recipe? This is my absolutely favourite rice pudding, that is, in my opinion, the best, most delicious rice pudding you can make!</p>
+	    			<img src="./assets/ricepudding.jpeg" width="100%" style="margin-bottom: 35px" />
+	    			<p style="font-weight: 150; margin: 0px 0px 30px; font-size: 17.8px; line-height: 1.6;">I have been making this stove-top rice pudding forever. Decades :) It's easily my favourite rice pudding recipe. And while it takes a little more time than some rice pudding recipes, it produces the most creamy and delicious rice pudding. It's definitely worth it!</p>
+	    			<p style="font-weight: 300; margin: 0px 0px 30px; font-size: 17.8px; line-height: 1.6;">I know some people tend to think of it as quite humble food, but when done right, it's about as far from humble food as you can get.</p>
+				</div>
+				<details style=" background: #f0f5f8; border-left: 1px solid #f0f5f8; color: #131f20; padding: 20px 30px 15px; margin-bottom: 40px; border-radius: 10px">
+					<summary style="list-style: none; outline: 1px solid #131f20">Jump to:</summary>
+						<ul style="list-style-type: none; color: #131f20; font-weight: 300; font-style: normal">
+							<li style="padding-bottom: 15px">
+								<a href="#ingredient-notes" style="text-decoration: underline; color:#131f20">Ingredient Notes</a>
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#stepbystep-photos" style="text-decoration: underline; color:#131f20">Step-by-Step Photos</a>   
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#recipe-video" style="text-decoration: underline; color:#131f20">Recipe video</a>
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#faq" style="text-decoration: underline; color:#131f20">FAQ</a>
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#cooks-notes" style="text-decoration: underline; color:#131f20">Cook's Notes</a>
+							</li>		
+							<li style="padding-bottom: 15px">
+								<a href="#recipe" style="text-decoration: underline; color:#131f20">Recipe</a>
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#save-or-share-this-recipe" style="text-decoration: underline; color:#131f20">Save or share this recipe</a>
+							</li>
+							<li style="padding-bottom: 15px">
+								<a href="#comments" style="text-decoration: underline; color:#131f20">Comments, Questions and Review</a>
+							</li>																																									
+						</ul>
+				</details>
+			</section>
+<!-- Section 3 -->
+			
+			<section style="font-family: Source-Serif-4; line-height: 1.6em; font-size: 17px">
+				<h2 id="ingredient-notes">Ingredient Notes</h2>
+				
+				<p><strong> Rice </strong> - Classic, old-fashioned rice pudding rice is typically made with converted long grain rice, such as Uncle Ben's™, and you can't go wrong with this rice. I also love Arborio rice for rice pudding. I love the plump grains of rice and it cooks up wonderfully in the milk. Basmati and Jasmine are also long grain rice, that would be an option in the absence of the first two choices. I don't recommend any other type of short-grain or quick-cooking rice for rice pudding, as it tends to result in a mushy pudding with this long-simmering recipe.</p>
+				
+				<p><strong> Milk </strong> - Whole, full-fat 3.5% b.f. milk is best for rice pudding. You can use 2%, if that's all you have, though the resulting pudding won't be quite as creamy. I wouldn't use milk less than 2%, for best results.</p>
+				
+				<p><strong>Cream</strong> - The addition of heavy whipping cream (35% b.f.) contributes both to the creamy flavour of the pudding and to the thickening process. I recommend using the heavy cream. You may be able to use a lighter cream in a pinch, such as Half & Half 10% cream, but I haven't tested it myself. I suspect it may result in a looser pudding to some extent.</p>
+				
+				<p><strong>White Granulated Sugar </strong> - The sugar is added simply for sweetness, so you can adjust the amount to your personal taste. I always suggest making the recipe as written first, then tweak after that. Likewise, other sweeteners will work here, but best to stick to granulated sweeteners if possible (vs liquid), to avoid thinning the pudding too much.</p>
+				
+				<p><strong>You will also need</strong> - eggs (2), salt, vanilla and raisins, if using.</p>
+			</section>
+			
+			<section style="font-family: Source-Serif-4; line-height: 1.6em; font-size: 17px">
+				<h2 id="stepbystep-photos">Step-by-Step Photos</h2>
+				
+				<p><em>This is a visual summary of the steps to make this rice pudding. Always refer to the Recipe Card below for complete instructions.</em></p>
+				<img src="./assets/ricemilk.jpg" width="100%" alt="RIce and Milk Image" style="margin-bottom: 35px" />
+				
+				<p>1. To start the rice pudding, you'll bring the milk to a boil in a large pot, over medium heat. Be sure to use a large pot and watch it closely. When milk hits the boil, it can boil up and over the edge of the pot, which is never a good thing.</p>
+				
+				<p>While the milk is heating, take a moment to prepare the custard ingredients (eggs, cream, sugar, vanilla and salt). I like to do this early in the process, so it has a chance to sit out and come to room temperature before using.</p>
+				
+				<p>When the milk comes to the boil, stir in your rice, then reduce the temperature under the pot to about medium low, or whatever setting on your stovetop that maintains a gentle simmer.</p>
+				
+				<img src="./assets/ricepuddingstep2.jpg" alt="Rice pudding Step 2" style="width: 670px; height: 200; margin-bottom: 35px" />
+				<p>2. You'll need to stir down the pudding every 10 minutes for the first 30 minutes of cooking. The milk will form a skin on top. Just stir it back into the pudding.</p>
+				
+				<p>After 30 minutes of cooking, you'll need to check and stir every 5 minutes, taste testing the rice with each stir until the rice is tender. At this point, much of the liquid has been absorbed, so it's important that you stir regularly and if necessary, add a bit more hot milk (or water) as needed, to the pot to avoid scorching the rice.</p>
+				
+				<img src="./assets/ricepuddingstep3.jpeg" alt="Rice Pudding Step 3" style="width: 670px; height: 200; margin-bottom: 35px"/>
+				<p>3. Once the rice is tender, slide the pot off the heat (to avoid scorching the rice) and slowly add a couple ladles off the hot rice/milk mixture to the egg mixture. You need to do this very slowly, a drop at a time, so you slowly bring the egg mixture up to the temperature of the rice mixture. If you add too much hot liquid at once, the eggs will cook an become a bit like scrambled eggs, which is definitely not what we want. Once you've added two ladles of hot rice mixture to the egg mixture. Add the egg mixture into the pot with the rice. Return the pudding to the heat over medium heat. Cook, stirring constantly, until the mixture just breaks a bubble, then remove to a bowl. Cover and refrigerate at least 6 hours. Pudding will thicken further as it refrigerates.</p>
+			</section>
+			
+<!-- Section 4 -->
+			
+			<section style="font-family: Source-Serif-4; line-height: 1.6em; font-size: 17px">
+				<h2 id="faqs">FAQS</h2>
+				
+				<p><strong>What is the best rice for rice pudding?</strong> It really is a matter of personal taste and whether the rice pudding recipe starts with cooked or uncooked rice. If it starts with cooked rice, pretty much any rice will work. This is not the case for rice pudding recipes that start with uncooked rice, as different rice will absorb liquid differently and affect the outcome. Converted white long grain rice, Jasmine, Basmati or Arborio Rice all all good choices for rice pudding that starts with uncooked rice.</p>
+				
+				<p><strong>Can I use brown rice for this rice pudding?</strong> No. Brown rice absorbs liquid in a different way than white rice and won't perform well with this recipe that starts with uncooked rice. As mentioned above, brown rice will work in rice pudding recipes that start with cooked rice, so you may wish to seek one of those out if you want to use brown rice.</p>
+				
+				<p><strong>Can I reduce or replace the sugar?</strong> Yes, you can reduce the sugar to taste. For replacing with an alternate sweetener, I suggest replacing with a granulated substitute vs. a liquid sweetener, to avoid thinning out the pudding.</p>
+				
+				<p><strong>Can I use non-dairy milk for rice pudding?</strong> I think so, for the most part. I haven't tried this myself, but I believe it will be fine to replace the milk with non-dairy milk for simmering the rice. Where it gets tricky is with the heavy cream, which contributes to the thickening of the pudding. Possible a non-dairy "cream" would work similarly, as it may have thickeners in it. Alternately, you may need to resort to a bit of cornstarch/water slurry at the end of cooking that you stir into the hot pudding as needed,to thicken it a bit.</p>
+				
+				<p><strong>Can I omit the eggs in rice pudding?</strong>  No, not in this recipe. The eggs are responsible for the thickening of the pudding, as we are essentially make a custard here at the end.</p>
+				
+				<p><strong>Why is my rice pudding too thick or thin?</strong>This rice pudding will thicken as it refrigerates. If it's a touch too thick for your liking, simply stir in a tablespoon or two of heavy cream and stir to loosen.</p>
+				
+				<p> If your rice pudding has ended up too thin, it is likely that it didn't cook it long enough at the end to thicken the custard. If it needs rescuing, pour it into a saucepan, heat, then stir in a bit of cornstarch mixed with cold water, a bit at a time, until the pudding thickens as needed. Re-refrigerate.</p>
+				<p><strong>How long will rice pudding keep in the fridge?</strong>Rice pudding will keep nicely in the fridge for 3-4 days. If it becomes too thick, simply stir in a tablespoon or two of heavy cream to loosen.</p>
+				
+				<p><strong>Can you freeze rice pudding?</strong>Yes, you can. Rice pudding will keep well frozen for up to 3 months. Thaw in the refrigerator.</p>
+				<img src="./assets/promoricepudding.jpg" width="100%" alt="Promo rice pudding" style="margin-bottom: 35px"/>
+			</section>
+<!-- Section 5 -->
+			
+			<section style="font-family: Source-Serif-4; line-height: 1.6em; font-size: 17px">
+				<h2 id="Cook's-notes">Cook's Notes</h2>
+				
+				<p>There are a few places where this recipe can go wrong, so I thought I'd point them out, since I've done all of them at one point or another :)</p>
+				
+				<p>1) Not watching the pot as your milk comes to a boil at the start of cooking and having it boil up and all over your stove. Use a large pot and watch very closely as it nears the boil (starts steaming), to avoid that mess.</p>
+				
+				<p>2) Simmering the milk/rice mixture too vigorously and not stirring it down regularly. Either can result in rice scorching on the bottom of the pan or the mixture drying out before the rice has a chance to cook. Keep mixture at a gentle, just-barely simmer and stir it down regularly. I like to set the timer on my stove in 10/5-minute increments, to remind me, so I can't forget about it cooking on the stove.</p>
+				
+				<p>3) Adding too much hot liquid to your egg mixture too quickly. You need to bring the temperature of the egg mixture up very slowly (called "tempering"), so that the eggs don't cook/curdle. Add a drop at a time (really!) at first and whisk continuously while adding. You can increase to a slow stream as you go along, but keep whisking and don't rush it.</p>
+				
+				<p>4) Not cooking the pudding long enough after you add the egg mixture, resulting in a soupy finished pudding. It can be hard to tell the first time you make it, when your custard has cooked long enough. It helps to know what you're aiming for. It won't look like the finished pudding in the photos. It will get there once it's refrigerated and set, but off the stove, it should look much more saucy. BUT, the sauce part should be creamy and noticeably thickened - not thin like milk. My method is when the pudding nears the boil (lots of steam rising from the mixture), I will stop stirring for a 10-15 seconds, to see if any bubbles rise in the middle. If not, I keep cooking, stirring for another minute or so, then I stop again, to see if any bubbles rise. Once I see a bubble rise, I keep cooking, stirring, for only about 30-60 seconds more, then remove and pour into serving bowl.</p>
+				
+				<p>5) Letting the liquid in the pot get too low. As rice absorbs liquid differently, you may find that the milk mostly disappears before your rice is cooked. If the mixture gets too dry, it may scorch on the bottom of the pan. Don't hesitate to add more milk or water to the pot towards the end of cooking, to make sure the liquid is sufficient to suspend the rice off the bottom. For best results add hot milk or hot water, to prevent cooling down the mixture.</p>
+				<img src="./assets/rice-pudding-2-3.jpg" alt src="Rice Pudding 2-3" width="100%" />
+			</section>
+	
+<!--  Recipe Section -->
+			
+			<h2 style="font-family: Source-Serif-4"> Recipe</h2>
+			
+			<article style="background-color: #f0f5f8; margin: 30px 0 0 0; border-radius: 10px; width: 670px; padding: 35px">
+				<section style="display: flex; gap: 5px; font-family: Source-Serif-4">
+					<div style="color: #131f20; line-height: 1.6em; font-family: Source-Serif-4">
+						<h2 style="font-size: 25px">Extra Creamy Rice Pudding</h2>
+						<p>A delicious and creamy rice pudding recipe, cooked on the stove-top. .</p>
+						<p>Author: Jennifer</p>
+						<img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><span>5 stars from 74 ratings</span>
+					</div>
+					<div>
+						<img src="./assets/creampudding.jpg" alt="Cream pudding" style="width: 200px; height: height 200px; border-color: #ffffff; border-radius:50%; border-width: 8px;  border-style: solid; margin-right: 20px">
+					</div>
+				</section>	
+				
+<!-- Icon Section -->
+
+				<section style="display: flex; justify-content: space-between; font-family: Ubuntu">
+					<button type="button" style="background-color: #353642; border-color: #353642; border-radius: 5px; flex-basis: 25%"><a href="https://www.seasonsandsuppers.ca/wprm_print/20233" style="text-decoration: none; color: #ffffff"><img src="./assets/printerlogo.svg" alt="Printer Logo" style="vertical-align: -10px" /><span> Print it<span></a></button>
+					
+					<button type="button" style="background-color: #d0021b; border-color: #d0021b; border-radius: 5px; flex-basis: 25%"><a href="https://www.pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fwww.seasonsandsuppers.ca%2Fcreamiest-rice-pudding%2F&media=https%3A%2F%2Fwww.seasonsandsuppers.ca%2Fwp-content%2Fuploads%2F2016%2F02%2Frice-pudding-2-3.jpg&description=Extra+Creamy+Rice+Pudding&is_video=false" style="text-decoration: none; color: #ffffff"><img src="./assets/pinterest2logo.svg" alt="Printer Logo" style="vertical-align: -10px" /><span> Pin it <span></a></button>
+					
+					<button type="button" style="background-color: #ffffff; border-color: #eeeeee; border-radius: 5px; flex-basis: 25%"><a href="https://www.seasonsandsuppers.ca/reader-recipe-collections/#" style="text-decoration: none; color: #353642;"><img src="./assets/booklogo.svg" alt="Printer Logo" style="vertical-align: -5px" /><span> + Collection <span></a></button>
+					
+					<button type="button" style="background-color: #ffffff; border-color: #eeeeee; border-radius: 5px; flex-basis: 25%"><a href="mailto:?subject=Check%20out%20this%20recipe%21&body=I%20found%20this%20recipe%20you%20might%20like%3A%0A%0AExtra%20Creamy%20Rice%20Pudding%0Ahttps%3A%2F%2Fwww.seasonsandsuppers.ca%2Fcreamiest-rice-pudding%2F%0A%0A4%20cups%20whole%20milk%20%28%283.5%25%20b.f.%29%2C%20plus%20up%20to%201%20cup%20more%2C%20as%20needed%29%0A1%2F2%20cup%20long%20grain%20white%20rice%20or%20Arborio%20rice%20%28%2Aor%20see%20Notes%20for%20other%20rice%20options%29%0A2%2F3%20cup%20heavy%20whipping%20cream%20%2835%25%20b.f.%29%0A1%2F3%20cup%20white%20granulated%20sugar%20%28or%20reduce%20to%20taste%29%0A2%20large%20egg%20yolks%0A1%201%2F2%20tsp%20pure%20vanilla%20or%20vanilla%20bean%20paste%0A1%2F8%20tsp%20salt%0AOptional%20%3A%201%2F2%20cup%20raisins%0A" style="text-decoration: none; color: #353642;"><img src="./assets/email.svg" alt="Printer Logo" style="vertical-align: -5px" /><span> Share by Email <span></a></button>
+				</section>
+				<section style="font-family: Source-Serif-4">
+					<div style="display: flex; align-items: center; margin-top: 10px">
+						<div style="border-bottom: 1px solid black; flex-grow: 1"></div>
+						<img src="./assets/akar.svg" />
+						<div style="border-bottom: 1px solid black; flex-grow: 1"></div>
+					</div>
+					<div style="display: flex; justify-content: space-between">
+						<div>
+							<h3 style="text-transform: uppercase">Prep time</h3>
+							<p>5 mins</p>
+						</div>
+						<div>
+							<h3 style="text-transform: uppercase">cook time</h3>
+							<p> 1 hr</p>
+						</div>
+						<div>
+						<h3 style="text-transform: uppercase">total time</h3>
+						<p> 1 hr 5 mins</p>	
+						</div>
+					</div>
+					</div>
+					<div>
+						<hr style="display: inline-block" width="20%">
+						<img src="./assets/tree.svg" />						
+						<hr style="display: inline-block" width="45%">
+						<img src="./assets/cut.svg" />
+						<hr style="display: inline-block" width="20%">
+					</div>
+					<div style="display: flex; justify-content: space-around">
+						<div>
+							<h3>COURSE</h3>
+							<span style="display: block">Dessert</span>
+						</div>
+						<div>
+							<h3>SERVINGS</h3>
+							<span style="background: black; padding: 0 15px; color: white; border-radius: 5px">-</span>
+							<input type="text" color: white; border: 2 solid black; style="width: 45px; border-radius: 25%" />
+							<span style="background: black; padding: 0 15px; color: white; border-radius: 5px">+</span>
+						</div>
+					</div>
+					
+					<br>
+					
+					<div>
+						<h3 style="display: inline; font-family: Times New Roman; font-size: 300; vertical-align: middle">Ingredients</h3>
+						<hr style="display: inline-block; vertical-align: middle" width="55%">
+						<button style="background-color: #353642;color: #ffffff; vertical-align: middle" class="button">1/2x</button>
+						<button style="background-color:#ffffff; color: #353642; vertical-align: middle" class="button">1x</button>
+						<button style="background-color: #353642;color: #ffffff; vertical-align: middle" class="button">2x</button>
+						<button style="background-color: #353642;color: #ffffff;border-left: 1px solid #353642; vertical-align: middle" class="button">3x</button>
+					</div>
+				</section>
+				<section>
+					<div style="letter-spacing: .05em; font-size: 17.8px; float:left" width="60%">
+						<p>4 cups whole milk, (3.5% b.f.), <small>plus up to 1 cup more, as needed</small></p>
+						<p>1/2 cup long grain white rice or Arborio rice, <small>*or see Notes for other rice options</small></p>
+						<p>2/3 cup heavy whipping cream, <small>35% b.f.</small></p>
+						<p>1/3 cup white granulated sugar, <small>or reduce to taste</small></p>
+						<p>2 large egg yolks</p>
+						<p>1 1/2 tsp pure vanilla or vanilla bean paste</p>
+						<p>1/8 tsp salt</p>
+						<p>Optional : 1/2 cup raisins</p>
+					</div>
+				</section>
+				<div style="margin-bottom: 20px">
+					<button style="background: #353642; color: #ffffff; width:100px; height: 50px; border-radius: 5px; margin-right: -5px">Imperial</button>
+					<button style="background: #ffffff; color:#353642; width: 100px; height: 50px; border-radius: 5px">Metric</button>
+				</div>
+				<!-- <section style="margin: 10 0px">
+					<img src="./assets/newtoggle.svg" style="margin: -20px; border-right: 10px" />
+					<h3 style="display: inline"><strong>Coke Mode</strong></h3>
+					<p style="display: inline">Prevent screen from going dark</p>
+				</section> -->
+				<!-- CUSTONM CHECKBOX CREATION -->
+				<div class="checkbox">
+					<input type="checkbox"/>
+					<div class="slider">
+						<div class="slide">
+							<span>OFF</span>
+							<div class="knob"></div>
+							<span class="on">ON</span>
+						</div>
+					</div>
+				</div>
+				<section style="padding-top: 30px; font-family: Source-Serif-4">
+					<h2 style="display: inline-block">Instructions</h2>
+					<hr style="display: inline-block; margin-bottom: -1px" width="75%">
+				</section>
+				<section>
+					<ol style="margin-bottom: 15px; font-size: 17.8px; letter-spacing: .05em; margin: 0 0 0 21px; font-family: Source-Serif-4; padding-top: 20px; line-height: 1.6em; list-style-type: decimal">
+						<li>Rinse a large saucepan with cold water. Don't dry. Set on stove-top over medium heat. Add milk. Heat milk to boiling, over medium heat, stirring regularly. WATCH 				CLOSELY as it nears the boil! When milk hits the boil, it will boil up and possibly over. That's not a good thing.</li>
+						<li>When milk boils, stir in rice and keep stirring until mixture returns to the boil. Reduce heat to a shade higher than low, or whatever level on your stove allows the mixture to gently simmer (bubble breaking the surface but not too vigorously). Simmer for 30 minutes, stirring down the mixture every 10 minutes (Important that you stir it down regularly and ensure that there is no rice sticking to the bottom of the pan. You will notice that the mixture has probably formed a skin on top. Don't remove it. Just stir it back in.)</li>
+						<li>Meanwhile, in a medium-sized bowl, use a fork to whisk together the cream, sugar, yolks, vanilla and salt. Set aside on counter while rice is cooking, leaving fork in bowl. Set out a ladle to use, as well. I like to do this after the rice starts cooking, so that the mixture comes to room temperature by the time it's needed.</li>
+						<li>Once milk/rice has simmered for 30 minutes, continue simmering, but stir down every 5 minutes. With each stir, start testing the done-ness of the rice by tasting a piece. You want the rice to be tender (so no hard center). **Depending on the rice you used, your mixture may start to get thick-ish at this point, with little milky liquid left. If so, add more hot milk or water to the pot, just as much as needed to loosen the mixture up, with each stir. Watch closely and don't let the mixture get dry or it will scorch. Continue cooking, stirring down and adding additional milk, as needed until the rice is tender. Most rice is generally done at about 45-50 minutes of total simmering time. A lot will depend on how vigorously your mixture is boiling, so there is no hard and fast rule. Taste testing is the best indicator.</li>
+						<li>Once the rice is cooked, slide the pot off the heat to avoid scorching. Re-whisk your egg mixture with your fork. Using the ladle, spoon out a ladle-full of hot rice/milk mixture, taking as much liquid as possible, but not to worry if you bring some of the rice with it. With the ladle in your left hand (assuming your right-handed, if not, reverse) and using your right hand to start whisking the egg mixture with the fork, start adding the hot mixture to the eggs <strong>A DROP AT A TIME</strong>, at first, while continuously whisking with the fork. Increase to a slow stream, while whisking continuously, until the entire ladle-full has been added. Get another ladle-full of hot liquid and slowly add it to the egg mixture as well, whisking continuously. Keep adding hot liquid until you've got at least 1 1/2 cups-1 3/4 cups of now warmed liquid in your bowl. Once you have reached that point, pour the warmed egg mixture into your cooking pot.</li>
+						<li>Return the saucepan to heat, over medium-low heat. Cook, stirring almost continuously, just until a dime-sized bubble breaks the surface of the pudding. Pudding should be noticeably thickened and saucy, but still more sauce than rice (pudding will set more in the fridge as it cools). If liquid seems almost like milk consistency (rather than heavy cream consistency), it's too thin. Cook, stirring, a little longer. **Note though that you never want to allow the mixture to vigorously boil after the egg mixture has been added, as you may end up with scrambled eggs.</li>
+						<li>If using raisins, add to the bottom of a medium-large bowl. When pudding is cooked, immediately pour hot mixture over raisins. Stir well to combine. Allow to stand on counter for about 5 minutes, to allow the steam to reduce, then cover bowl with plastic wrap and place into the refrigerator. Allow to cool and set, at least 6 hours or preferably, over-night. Pudding will set as it cools. To serve, simply stir and spoon into bowls. Serve with a sprinkling of cinnamon, if desired. If pudding is or becomes too thick, simply add a tablespoon or so of heavy cream to mixture and stir in. If you enjoy your rice pudding warmed, you can warm slightly in the microwave or a small saucepan.</li>
+					</ol>
+				</section>
+				<section style="padding-top: 30px; font-family: Source-Serif-4">
+					<h2 style="display: inline-block">Notes</h2>
+					<hr style="display: inline-block; margin-bottom: -1px" width="85%">
+				</section>
+				<section style="margin-bottom: 15px; font-size: 17.8px; letter-spacing: .05em; margin: 0 0 0 21px; font-family: Source-Serif-4; padding-top: 20px; line-height: 1.6em">
+					<p>Use long grain converted white rice for a classic, old-fashioned rice pudding. Arborio rice also makes lovely rice pudding, though it tends to absorb a bit more liquid, so expect that you will need to add a bit more hot milk or water towards the end of simmering. Jasmine and Basmati are other long grain rice options, if you like. I don't recommend a short-grain or quick-cooking rice here.
+					</p>
+					<p>Be sure to read the Ingredient Notes, FAQ and Cook's Notes above the recipe card for more tips and substitution suggestions for making this recipe. You will also find Step-by-Step Photos to see the process of this pudding being made.</p>
+				</section>
+				<section style="padding-top: 30px; font-family: Source-Serif-4">
+					<h2 style="display: inline-block">Nutrition</h2>
+					<hr style="display: inline-block; margin-bottom: -1px" width="75%">
+				</section>
+				<section>
+					<div style="color: #231f20; font-family: Source-Serif-4; font-size: 17.8px">
+						<p>Calories: 316kcal <span> | </span> Carbohydrates: 34g <span> | </span> Protein: 8g | Fat: 17g <span> | </span> Saturated Fat: 10g <span> | </span></p> 
+						<p style="font-size: 15.3px">Cholesterol: 114mg | Sodium: 131mg | Potassium: 254mg | Fiber: 1g | Sugar: 20g <span> | </span> Vitamin A: 734IU | </span></p>
+						<p>Vitamin C: 1mg <span> | </span> Calcium: 209mg <span> | </span>Iron: 1mg</p>
+						<cite><small>Nutritional information provided for general guidance only and should not be relied upon to make personal health decisions.</small></cite>
+					</div>
+				</section>
+				<section>
+					<div>
+						<hr style="display: inline-block; vertical-align: middle" width="45%">
+						<img src="./assets/searchlogo.svg" style="vertical-align: middle"/>						
+						<hr style="display: inline-block; vertical-align: middle" width="45%">
+					</div>
+				</section>
+					<div style="display: flex; justify-content: space-around">
+						<div>
+							<h3>COURSE</h3>
+							<p>Dessert</p>
+						</div>
+						<div>
+							<h3>CUISINE</h3>
+							<p>American</p>
+						</div>
+					</div>
+					<section style="background: #353642; border-radius: 10px; color: #ffffff; ">
+						<div style="display: flex; justify-content: center; gap: 15px">
+							<img src="./assets/penlogo.svg" />
+							<div>
+							<h2 style="color: white">Never miss a new recipe!</h2>
+							<p><a href="https://www.seasonsandsuppers.ca/newsletter-subscribe/" style="text-decoration: underline; color: #ffffff">SIGN UP</a> for email updates!</a></p>
+							</div>
+						</div>
+					</section>
+			</article>
+			
+		<!-- Save or Share this recipe section -->
+			<article>
+				<h2 style="margin: 37px 0px 21px; font-size: 21px; color:#131f20; letter-spacing: .03em; line-height: 1.6; font-family: Times New Roman">Save or share this recipe</h2>
+				<section style="background: #f0f5f8; padding: 28px 20px 20px; border-radius: 10px;" width="100%">
+					<div>
+						<a href="https://www.pinterest.com/pin/create/button/?url=https://www.seasonsandsuppers.ca/creamiest-rice-pudding/&media=https://www.seasonsandsuppers.ca/wp-content/uploads/2016/02/rice-pudding-2-3.jpg&description=Extra%20Creamy%20Rice%20Pudding" style="vertical-align: center"><img src="./assets/pinterestblack.svg" /></a>
+						<a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.seasonsandsuppers.ca%252Fcreamiest-rice pudding%252F%26display%3Dpopup%26ref%3Dplugin%26src%3Dshare_button&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=en_GB" style="vertical-align: center"><img src="./assets/facebookblack.svg" /></a>
+						<a href="https://twitter.com/share?url=https://www.seasonsandsuppers.ca/creamiest-rice-pudding/&text=Extra%20Creamy%20Rice%20Pudding" style="vertical-align: center"><img src="./assets/twitterblack.svg" /></a>
+						<span style="font-size: 16px; vertical-align: super"><em>25k Shares</em></span>	
+					<div>				
+				</section>
+				<section>
+					<h4>Meet the author<h4>
+					<div>
+						<img src="./assets/femaleimage.jpg" style="margin: 10px 25px 0px 0px; float: left" width="25%" />
+						
+						<p style="font-size: 20px; font-family: Ubuntu">Hi! I'm Jennifer, a home-cook of many years and a lifelong seeker of delicious food! I'm an equal opportunity eater. I enjoy eating all the foods!</p>
+						<p style="font-size: 20px; font-family: Ubuntu">I love to share the classic recipes that I have enjoyed for years, as well as newer discoveries, that have become fast favourites.</p>
+						<p><a href="https://www.seasonsandsuppers.ca/about/" style="text-decoration: underline; color: #696969"> More about me here ... </a></p>
+					</div>
+					<div>
+						<h4>Seasons and Suppers is honoured to have been featured on these great sites ...</h4>
+						<img src="./assets/countryliving.png" />
+					</div>
+					<div style="background: #f0f5f8; font-family: ubuntu; margin: 45px 15px; padding: 10px 10px 30px; border-radius: 10px; letter-spacing: .03em; line-height: 1.6;" width="100%">
+						<h4>Tried this Recipe?</h4>
+						<p>You can leave a Recipe <strong>Rating</strong> by simply clicking on the stars in the Recipe Card above or if you like, you can leave a <strong> Comment and Rating </strong> in the comment section below! It's always helpful for other cooks to hear feedback on a recipe from someone who has tried it!</p>
+						<br>
+						<cite>You don't need to use your full name or even your real name when leaving a comment. You just need to be a real person :) Your email address will never be publicly displayed or shared.</cite>	
+					</div>
+				</section>
+				
+<!-- Comment Section -->
+				<section>
+					<h3 style="font-family:Ubuntu; text-align: center; font-size: 37px; letter-spacing: .007em; font-weight: 300; line-height: 1.3; margin: 0px 0px 10px">Comments</h3>
+				</section>
+				<div style="border-bottom: 1px solid #515555; margin: 0px auto 40px; width: 55px; padding-top: 20px"></div>
+			</article>
+			<section style="font-family: Ubuntu; padding: 37px 0px 0px; font-size: 16px; color: #131f20; line-height: 1.6;font-weight: 300; font-size: 100%;letter-spacing: .03em">
+				<p style="margin-bottom: 0px">Tammy Whelan says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"> 
+				<time><small>June 06, 2022 at 5:20 pm</small></time>
+				</p>
+				<div>
+					<p style="margin: auto">Very nice. I used a vanilla bean pod and brown sugar. 2% milk and 1/2 &1/2 was what I had and it got 2 thumbs up👍👍</p>
+					<span>It’s gluten free as well 🤗</span>
+				</div>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220615" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div style="padding: 25px 0px 30px; font-family: Ubuntu; font-size: 16px; color:#131f20; line-height: 1.6">
+					<ul style="list-style-type: none; text-decoration: none">
+						<li>Jennifer says</li>
+						<li> 
+							<time><small>June 06, 2022 at 6:55 pm</small></time>
+						</li>
+						<p>So glad to hear, Tammy :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220618" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<p style="margin-bottom: 0px">Jane says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"> 
+				<time><small>May 14, 2022 at 4:45 am</small></time>
+				</p>			
+				<div>
+					<img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" /><img src="./assets/starlogo.svg" alt="Star Logo" class="star" />
+					<p>Delicious, but could go with slightly less sugar. I added nutmeg but left out sultanas.</p>
+					<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220426" style="text-decoration: none; color: #696969">Reply</a></p>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none">
+							<li>Jennifer says</li>
+							<li>
+								<time><small>May 14, 2022 at 9:04 am</small></time>
+							</li>
+							<p>So glad you enjoyed it, Jane. Sweetness is very subjective, but easily tweaked in this one :) I do find that if you eat it warm, it tastes sweeter than it does eaten cold (which I generally do). Thanks so much!</p>
+							<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220432" style="text-decoration: none; color: #696969">Reply</a></p>
+						</ul>
+					</div>
+					<p style="margin-block-end: auto">maureen says</p>
+					<p style="padding-top: 0px; margin-block-start: auto"><time><small>April 13, 2022 at 1:58 pm</small></time>
+					</p>
+					<div>
+						<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+						<p>This is simply the BEST and creamiest rice pudding recipe i have made - especially with the arborio rice. I made it exactly as the recipe required. Amazing. I have made it a few times now. My only caution is if my husband comes in with a spoon before it has completely set - it will be a bit watery and you will need to stir it up before serving (or don't tell anyone its there). Thanks you for this!</p>
+					</div>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none">
+							<li>Jennifer says</li>
+							<li><small>April 13, 2022 at 2:25 pm</small></li>
+								<p>Lol! So glad you enjoyed it, Maureen and yes, I have been known to hide it in the fridge myself :) Thanks so much!</p>
+							  	<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220053" style="text-decoration: none; color: #696969">Reply</a></p>
+						</ul>
+					</div>
+					<p style="margin-block-end: auto">Trish says</p>
+					<p style="padding-top: 0px; margin-block-start: auto"><time><small>April 10, 2022 at 6:37 pm</small></time>
+					</p>
+					<div>
+						<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+						<p>Best rice pudding ever- and I am picky! I always double it so there is enough for my family!</p>
+					</div>
+					<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220021" style="text-decoration: none; color: #696969">Reply</a></p>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none">
+							<li>Jennifer says</li>
+							<li><small>April 10, 2022 at 6:45 pm</small></li>
+						</ul>
+					</div>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none; margin: 0px 0px 20px">
+							<li >So glad to hear, Trish (I'm picky, too :) Thanks so much!</li>
+							  <li><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220022" style="text-decoration: none; color: #696969">Reply</a></li>
+						</ul>
+					</div>
+					<p style="margin-block-end: auto">riki says</p>
+					<p style="padding-top: 0px; margin-block-start: auto"><time><small>April 03, 2022 at 1:59 pm</small></time>
+					</p>
+					<div>
+						<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+						<p>Delicious! Followed as written and it came out beautifully. Used sushi grain rice I soaked overnight so it'd release some starch and wouldn't thicken too much.</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219925" style="text-decoration: none; color: #696969">Reply</a></p>
+					</div>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none; margin: 0px 0px 20px">
+							<li style="margin-block-end: auto">Jennifer says</li>
+							 <li tyle="padding-top: 0px; margin-block-start: auto"><time><small>April 03, 2022 at 1:59 pm</small></time></li>
+						</ul>
+					<div>
+						<ul style="list-style-type: none; text-decoration: none; margin: 0px 0px 20px">
+							  <li>So glad you enjoyed it, Riki! Thanks so much :)</li>
+							  </ul>
+					</div>
+				<p style="margin-left: 40px"><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219926" style="text-decoration: none; color: #696969">Reply</a></p>
+				<p style="margin-block-end: auto">Laura Bennett says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>March 01, 2022 at 12:08 am</small></time>
+				<p style="margin-bottom: 20px">I made this rice pudding for a friend who had dental surgery. I don't usually try a recipe first hand due to the risk of it not turning out but this recipe is wonderful! I used arborio rice and added vanilla caviar to the extract. Other than that I went exactly by the recipe. It didn't take as long, 40 minutes maybe, but it turned out phenomenal.This pudding tasted like none other that I've had. Thank you! This is definitely a keeper for me</p>
+				<p style="margin-bottom: 20px">Laura<p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219482" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer say</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>March 01, 2022 at 12:08 am</small></time></li>
+					</ul>
+				</div>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-bottom: 20px">So glad to hear, Laura :) Thanks so much!</li>
+						<li><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219483" style="text-decoration: none; color: #696969">Reply</a></li>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">Jane says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>February 19, 2022 at 6:12 pm</small></time>
+				<div>
+					<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+					<p style="margin-bottom: 20px">I tried this recipe this afternoon and it was absolutely delicious. I used vanilla bean instead of extract as it's what I had on hand. Amazing! I will definitely be making this again! Thank you so much.</p>
+				</div>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219355" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer say</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>February 19, 2022 at 7:08 pm</small></time></li>
+						<p style="margin-bottom: 20px">So glad to hear, Jane :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219360" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Dennis says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>June 16, 2022 at 5:25 pm</small></time></li>
+					</ul>
+				</div>
+				<div>	
+					<ul style="list-style-type: none; text-decoration: none">
+						<li><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /></li>
+						<li>Easy to follow with wonderful results! I'm a novice cook and it was simple to follow and it's better than kozy shack imo. I used jasmine rice and it worked great.</li>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219360" style="text-decoration: none; color: #696969">Reply</a></p>
+							<ul style="list-style-type: none; text-decoration: none">
+								<li style="margin-block-end: auto">Jennifer say</li>
+								<li style="padding-top: 0px; margin-block-start: auto"><time><small>February 19, 2022 at 7:08 pm</small></time></li>
+								<p>So happy to hear, Dennis :) Glad you enjoyed it. Thanks so much!</p>
+								<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-220680" style="text-decoration: none; color: #696969">Reply</a></p>
+							</ul>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">Anne says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>February 11, 2022 at 9:40 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+				<p style="margin-bottom: 20px">First of all, I really want to thank you for putting such specific instructions in the recipe steps. The description of how the milk and rice mixture should be simmering helped immensely in getting it to the "correct" simmer. The instruction to leave the fork in the egg mixture saved me from using an extra utensil. The part to get the ladle out saved me from having to search for it in the moment. These small, descriptive instructions really help to save time and effort in the process of making this stunningly delicious rice pudding.</p>
+				
+				<p>All of that aside, this recipe is an absolute winner. My family and I are pretty particular when it comes to rice pudding, and this one hit on all notes for us. Thank you!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219226" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>February 12, 2022 at 6:26 pm</small></time></li>
+						<p>So glad to hear, Anne and happy you enjoyed the pudding. I'm pretty particular when it comes to rice pudding, too :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219236" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+
+				<p style="margin-block-end: auto">Mark says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>January 17, 2022 at 8:49 am</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+				<p style="margin-bottom: 20px">After years of searching & trial and error trying to find a rice pudding recipe that came close to my Swedish grandmother’s, I came upon this one by chance and it is wonderful. First of all, I truly appreciated the level of detail provided, not just about the assembly, but about the ingredients as well. For someone who bakes a lot, you can easily tell when a recipe has been tested over and over again to get it right before it’s published. This is clearly one of those recipes!! I especially appreciated the direction to stop and check the texture of the rice during cooking to make sure it wasn’t getting to soft. I never saw that in any other rice pudding recipe. The end result was loved by all so this recipe became an immediate “keeper”. Thank you!!</p>
+				
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218878" style="text-decoration: none; color: #696969">Reply</a></p>
+					<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>January 17, 2022 at 9:20 am</small></time></li>
+						<p>So glad you enjoyed it, Mark :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218879" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Susan K says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>January 02, 2022 at 8:12 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+				<p style="margin-bottom: 20px">This was delicious. I made it almost exactly as written. I used half brown sugar and a packet of splenda. I didn’t find it complicated at all especially with the very clear instructions. It makes a dish much greater than the sum of its parts. Thank you!</p>
+				
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218733" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>January 03, 2022 at 11:35 am</small></time></li>
+						<p>So glad you enjoyed it, Susan :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218734" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Cheri A Magistro says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>December 10, 2021 at 6:15 pm</small></time>
+				<p style="margin-bottom: 20px">Can I use already cooked rice? I have about 2 cups. Thanks!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218456" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>December 10, 2021 at 7:01 pm</small></time></li>
+						<p>Hi Cheri and I'm afraid this recipe won't work with already cooked rice. I know there are lot of recipes online that start with cooked rice, so you should be able to find one that would be a better option for you.</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218458" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">Muriel Newman says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>December 07, 2021 at 6:33 am</small></time></p>
+				
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+				<p style="margin-bottom: 20px">I made this recipe as I said I would. It’s “ the best ever “! Now I get requests for it all the time. I love it, so worth the time & effort. Thanks so much 😊❤️</p>	
+				
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218425" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>December 07, 2021 at 9:15 am</small></time></li>
+						<p>So glad to hear, Muriel :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218426" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Naomi A. says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>January 31, 2022 at 10:42 am</small></time></li>
+						<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+						<p>Wow! Delicious and a hit with family and friends! Thank you for this recipe. While it may take a little longer than other recipes, it is the best for the end product. I was a little concerned the amount of rice would not be enough but you were on point and the pudding was perfect!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219071" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+							<ul style="list-style-type: none; text-decoration: none">
+								<li style="margin-block-end: auto">Jennifer says</li>
+								<li style="padding-top: 0px; margin-block-start: auto"><time><small>January 31, 2022 at 10:45 am</small></time></li>
+								<p>So glad you enjoyed it, Naomi and yes, it does seem like so little rice when you put it in the pot :) Thanks so much!</p>
+								<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-219072" style="text-decoration: none; color: #696969">Reply</a></p>
+							</ul>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">Marilyn says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>November 19, 2021 at 6:40 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />		
+				<p style="margin-bottom: 20px">Perfection! I had to make rice pudding for a potluck and I "test-drove" another recipe beforehand. Not up to snuff. I found this one and I knew it would great before I even made it. And it was. I added raisins that had been soaking in rum for a few months ... Everyone loved it. Making it again for just me and my husband. Thanks!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218222" style="text-decoration: none; color: #696969">Reply</a></p>
+
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>November 15, 2021 at 8:55 am</small></time></li>
+						<p>It's a favourite of mine, too Muriel :) Do enjoy!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218180" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Amy Watkins says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>November 14, 2021 at 4:22 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />		
+				<p style="margin-bottom: 20px">Thank you for putting this recipe online! I’ve been looking all over the internet for this exact recipe. I used to make it all the time however my grandma’s 90 year old recipe got lost in our move. I could remember most of the recipe but wanted the exact one to be sure so I’m ecstatic to have found it! My son has this every year for his birthday instead of cake because he loves it so much! :-) Thanks also for sharing all your tips and tricks! Excellent!!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218173" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>November 14, 2021 at 6:54 pm</small></time></li>
+						<p>So glad to hear, Amy! Thanks so much and enjoy the pudding :)</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-218175" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Sherry Oakes says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>October 25, 2021 at 9:40 am</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />		
+				<p style="margin-bottom: 20px">This is the most incredible rice pudding I've ever made; my husband is in love with it! I used whole milk, and the only change I made was to use whole evaporated milk instead of cream. It is a long, involved recipe, but definitely worth it. TEN YUMS UP!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217995" style="text-decoration: none; color: #696969">Reply</a></p>
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>October 25, 2021 at 11:56 am</small></time></li>
+						<p>So glad you enjoyed it, Sherry :) Thanks so much!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217996" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">Ingrid says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>September 27, 2021 at 2:22 pm</small></time></p>
+						
+				<p style="margin-bottom: 20px">What can i use instead of cream</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217764" style="text-decoration: none; color: #696969">Reply</a></p>
+
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>September 27, 2021 at 7:08 pm</small></time></li>
+						<p>Perhaps coconut cream or stirred coconut milk?</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217768" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<p style="margin-block-end: auto">mimi says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>September 26, 2021 at 1:39 pm</small></time></p>
+						
+				<p style="margin-bottom: 20px">This looks fantastic! Is it ok to double this recipe? I know some recipes are recommended to be made in multiple batches rather than doubling. I need to feed 8-10 people with this.</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217741" style="text-decoration: none; color: #696969">Reply</a></p>
+
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>September 26, 2021 at 3:14 pm</small></time></li>
+						<p>Hi Mimi, I have never doubled the recipe myself, but I think others have mentioned that they did and it worked fine. One note though is to start with a really big pot, as the milk does boil up quite a bit and especially when doubling it, you'll want to have lots of room for it to rise, so it doesn't boil over. Enjoy!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217744" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+
+				<p style="margin-block-end: auto">Sandy says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>September 11, 2021 at 8:44 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />		
+				<p style="margin-bottom: 20px">Spectacular! I was a little hesitant when I found this recipe as it seemed a bit advanced for me. However I loved all of the detail included. I gave it a whirl and it is the best rice pudding by far I have ever made. Absolutely a keeper and worth the time and attention and talk. I did find it a bit sweet and will reduce it to a 1/4 cup sugar next time. Also only had 1/3 cup heavy whipping cream and that worked just fine.</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217587" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>September 11, 2021 at 9:11 pm</small></time></li>
+						<p>So glad to hear, Sandy! Thanks so much :)</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-217588" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Ana Hernandez says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>June 20, 2021 at 4:46 pm</small></time></p>
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />		
+				<p style="margin-bottom: 20px">Your recipes are great! Come out perfect, I love them!😍👏🏼</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-216959" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>June 20, 2021 at 7:23 pm</small></time></li>
+						<p>Thanks so much, Ana :)</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-216960" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				
+				<p style="margin-block-end: auto">Elizabeth says</p>
+				<p style="padding-top: 0px; margin-block-start: auto"><time><small>May 28, 2021 at 8:11 am</small></time>
+					
+				<p style="margin-bottom: 20px">Hi there! Just wondering if you rinse the rice in water before adding it into the milk? Very eager to try this recipe!</p>
+				<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-216720" style="text-decoration: none; color: #696969">Reply</a></p>
+				
+				<div>
+					<ul style="list-style-type: none; text-decoration: none">
+						<li style="margin-block-end: auto">Jennifer says</li>
+						<li style="padding-top: 0px; margin-block-start: auto"><time><small>May 28, 2021 at 9:28 am</small></time></li></p>
+						<p>Hi Elizabeth, I use either long grain or Arborio rice and I don't rinse either. If using something like a Basmati rice, it may benefit from rinsing, but I haven't tested it myself, so can't really say. Do enjoy!</p>
+						<p><a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/#comment-216722" style="text-decoration: none; color: #696969">Reply</a></p>
+					</ul>
+				</div>
+				<div style="display: inline-block; background: #f0f5f8; color: #696969; padding: 20px; font-size: 16px">
+				<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/comment-page-4/#comments" style="text-decoration: none; color: #696969">« Older Comments</a>
+				</div>
+			</section>
+			
+			<br>
+			<br>
+
+			
+<!--  Add Comments Section -->
+
+			<h2 style="text-align: center; margin: 0px 0px 10px; font-size: 27px; letter-spacing: .007em; color: #353642">Add a Comment, Question or Review</h2>
+			
+			<br>
+			<br>
+
+			<div style="border: 1px solid #515555; margin: 0px auto 40px; width: 45px; border-bottom: 25px"></div>
+			
+			
+			<div>
+			<p>Your email address will not be published. Required fields are marked *</p>
+			</div>
+			
+			<h3 style="margin-block-end: auto">Recipe Rating</h3>
+			<div style="margin-block-start: auto">
+				<img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" /><img src="./assets/starlogo.svg" />
+			</div>	
+			
+<!-- 			Comment Box -->
+			<div style="margin-top: 20px">
+				<label for="comment">Comments *</label>
+			</div>
+				<textarea id="comment" name="comment" rows="15" cols="55" style="background-color: #fff; border: 1px solid #eee; padding: 13px; width: -webkit-fill-available"></textarea>
+			<p>
+				<label style="display: block">Name</label>
+				<input type="text" name="Name" style="background-color: #fff; border: 1px solid #eee; padding: 13px; width: -webkit-fill-available" />
+				</p>
+				
+				<p>
+				<label style="display: block">Email</label>
+				<input type="email" name="Email" style="background-color: #fff; border: 1px solid #eee; padding: 13px; width: -webkit-fill-available" />
+				</p>
+				
+<!-- 	POST COMMENT BUTTON -->
+				
+				<div style="background: #353642; padding: 17px 21px; border-color: #353642; width: fit-content"><a href="https://www.seasonsandsuppers.ca/wp-comments-post.php" style="text-decoration: none; color: #ffffff; letter-spacing: 2px">POST COMMENTS</a></div>
+				<p style="color: #131f20; letter-spacing: .03em; line-height: 1.6">This site uses Akismet to reduce spam. Learn how your comment data is processed.</p>
+				
+			
+		</article>
+				
+<!-- 	Aside  Section -->
+		<aside>
+			<article style="width: 300px; font-family: Times New Roman">
+				<section style="display: flex; flex-direction: column; align-items: center">
+					<div style="background: #353642; padding: 14px; border-radius: 100%">
+						<img src="./assets/doublequote.svg" />
+					</div>
+					<div>
+					<blockquote style="font-style: italic; font-family: Source-Serif-4; line-height: 1.4">“One of the best Food Blogs in Canada.” <em>National Post</em></blockquote>
+					<p style="font-family: Source-Serif-4; line-height: 1.4">Hi! I'm Jennifer. Are you are looking for simple, seasonal and delicious everyday recipes? Do you love classic, homey, comforting food, but with a modern, real food update? Good! Me, too!</p>
+					<p style="font-family: Times New Roman; line-height: 1.4">Learn more about me here →</p>
+					</div>
+				</section>
+					
+<!-- Image section of Aside -->
+				<section>
+					<h2 style="font-family: Ubuntu">Trending Recipes</h2>
+					
+					<div style="display: flex; gap: 25px; justify-content: space-between; margin-top: 15px">
+						<a href="https://www.seasonsandsuppers.ca/2-banana-banana-bread/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/bananabread.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center">SIMPLY PERFECT 2-BANANA BANANA BREAD </div>
+						</a>
+						<a href="https://www.seasonsandsuppers.ca/mango-salad/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/mangosalad.jpg" width="150"  />
+							<div style="padding-top: 15px; text-align: center">MANGO SALAD WITH ZESTY LIME VINAIGRETTE </div>
+						</a>
+					</div>
+					<div style="display: flex; gap: 25px; justify-content: space-between; margin-top: 15px">
+						<a href="https://www.seasonsandsuppers.ca/creamiest-rice-pudding/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/ricepudding3.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center">EXTRA CREAMING RICE PUDDING</div>
+						</a>
+						<a href="https://www.seasonsandsuppers.ca/glazed-lemon-pound-cake-loaf/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/lemonloafbread.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center; text-transform: uppercase"> glazed lemon pound cake loaf </div>
+						</a>
+						</div>
+						<div style="display: flex; gap: 25px; justify-content: space-between; margin-top: 15px">
+						<a href="https://www.seasonsandsuppers.ca/15-minute-spicy-udon-vegetable-stir-fry/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/spicyspagetti.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center; text-transform: uppercase"> 15 minutes spicy udon stir fry</div>
+						</a>
+						<a href="https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/poulineyam.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center; text-transform: uppercase"> authentic canadian poutine recipe </div>
+						</a>
+					</div>
+				</section>
+				<section>
+					<h2 style="font-family: Ubuntu">Spring Recipe Collections </h2>
+					<div style="display: flex; gap: 10px; justify-content: space-between; margin-top: 15px">
+						<a href="https://www.seasonsandsuppers.ca/recipe-collections/rhubarb-recipes/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/iru.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center"> RHUBARB RECIPES</div>
+						</a>
+						<a href="https://www.seasonsandsuppers.ca/recipe-collections/celebrating-citrus/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/iru2.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center"> CELEBRATING CITRUS</div>
+						</a>
+					</div>
+					<div style="display: flex; gap: 10px; justify-content: space-between; margin-top: 15px">
+						<a href="https://www.seasonsandsuppers.ca/recipe-collections/maple-recipes/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/donut.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center; text-transform: uppercase"> marple recipes</div>
+						</a>
+						<a href="https://www.seasonsandsuppers.ca/recipe-collections/spring-favourites/" style="text-decoration: none; color: #131f20">
+							<img src="./assets/leaf.jpg" width="150" />
+							<div style="padding-top: 15px; text-align: center; text-transform: uppercase"> spring favourites </div>
+						</a>
+					</div>
+				</section>
+			</article>
+		</aside>
+	</main>	
+		
+<!-- Footer section -->
+		<footer>
+			<article style="background: #353642; color: #fff; margin: 30px 0 0 0; padding: 35px 0 10px; border-bottom: 1px solid #888">
+				<h4 style="text-align: center"><a href="#" id="header" style="text-decoration: underline; color: #fff">↑ Back To Top </a></h4>
+			<section style="display: flex; justify-content: space-around">
+					<div>
+						<ul style="text-decoration: none; color: #fff; list-style-type: none">
+							<li>Explore</li>
+						</ul>
+						<ul style="text-decoration: underline; color:#fff; list-style-type: none">
+							<li><a href="https://www.seasonsandsuppers.ca/about" style="text-decoration: underline; color:#fff">About</a></li>
+							<li><a href="https://www.amazon.com/shop/seasonsandsuppers" style="text-decoration: underline; color:#fff">My Amazon Shop</a></li>
+							<li><a href="https://www.youtube.com/channel/UC-uEsrcKSgYbEkLufZsbk5g" style="text-decoration: underline; color:#fff">YouTube Channel</a></li>
+							<li><a href="https://www.seasonsandsuppers.ca/web-stories/" style="text-decoration: underline; color:#fff">My Web Stories</a></li>
+							<li><a href="https://www.seasonsandsuppers.ca/privacy-policy" style="text-decoration: underline; color:#fff">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div>
+						<p>Newsletter</p>
+						<p><a href="https://www.seasonsandsuppers.ca/newsletter-subscribe/" style="text-decoration: underline; color: #fff">Sign Up!</a> for free email updates of new <br> posts and seasonal favourites from the<br /> recipe archives. It's sent just once a week <br /> and your email address is never shared or <br /> sold.</p>
+					</div>
+					<div>
+						<p>Contact</p>
+						<p><a href="https://www.seasonsandsuppers.ca/contact" style="text-decoration: underline; color: #fff">Contact Me</a></p>
+					</div>
+				</section>
+				<section style="text-align: center; font-size: 14px;">
+					<p>As an Amazon Associate I earn from qualifying purchases.</p>
+					<p>This site uses Cookies to provide the best user experience. Learn more in our <a href="https://www.seasonsandsuppers.ca/privacy-policy/" style="text-decoration: underline; color: #fff">Privacy Policy.</a></p>
+					<div>
+						<p>Copyright &copy; 2022 Seasons and Suppers. All Rights Reserved.</p>					
+					</div>
+				<section>
+			</article>
+		</footer>
+</body>
+</html>

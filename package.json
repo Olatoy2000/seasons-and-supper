@@ -1,0 +1,19 @@
+{
+  "name": "4.-seasons-and-suppers",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://Olatoy2000.github.io/seasons-and-suppers",
+  "scripts": {
+    "start": "parcel serve ./index.html",
+    "build": "parcel build ./index.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url .",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "parcel": "^2.7.0"
+  }
+}
